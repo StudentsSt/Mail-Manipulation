@@ -42,7 +42,7 @@ namespace Translator
 
         }
 
-        [TestCase("Английский", "Украинский", "doga", "собака")]
+        [TestCase("Английский", "Украинский", "dog", "собака")]
         [TestCase("Латышский", "Украинский", "suns",  "собака")]
         [TestCase("Французский", "Украинский", "un chien", "собака")]
         public void TranslateText(string firstlang, string seclang, string word, string translatedWord)
