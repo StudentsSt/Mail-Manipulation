@@ -13,7 +13,7 @@ using MainTest.FrameWork.WaitExtenstions;
 using MainTest.FrameWork.TestConf;
 
 
-namespace MainTest.Tests.TextFormat
+namespace TextFormat
 {
     public class TextFormatter : TestMailBase
     {
@@ -33,7 +33,7 @@ namespace MainTest.Tests.TextFormat
 
 
         [Test]
-        public void TextFormatterManipulation()
+        public void E_TextFormatterManipulation()
         {
             TextForamtterObjects textFormatObject = new TextForamtterObjects(driver);
             IWebElement textformat;

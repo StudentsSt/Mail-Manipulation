@@ -46,7 +46,7 @@ namespace MainTest.Tests
 
         [Test]
 
-        public void LoginId()
+        public void C_CheckObjectId()
 
         {
             MailPageObjects checkObject = new MailPageObjects(driver);

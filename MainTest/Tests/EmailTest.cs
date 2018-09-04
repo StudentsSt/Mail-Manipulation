@@ -20,7 +20,7 @@ using System.Threading;
 
 namespace MainTest
 {
-   
+
         public class EmailTests: TestMailBase
     {
 
@@ -40,7 +40,7 @@ namespace MainTest
         }
 
         [Test]
-        public void MailManipulation()
+        public void D_MailManipulation()
         {
             
             MailPageObjects mailPage = new MailPageObjects(driver);
@@ -51,10 +51,7 @@ namespace MainTest
 
 
             Assert.IsTrue(mailPage.mailadress.Displayed);
-
-
-            WaitExtensions.WaitForElement(driver, mailPage.drafts);
-          
+            WaitExtensions.WaitForElement(driver, mailPage.drafts);        
             Assert.IsTrue(mailPage.mail.Text.Contains("Невелика довідка про"));
             Actions action = new Actions(driver);
             action.MoveToElement(mailPage.mail).Build().Perform();
@@ -68,8 +65,6 @@ namespace MainTest
             mailPage.CheckMail();
         }
 
-        [Test]
-
 
         [OneTimeTearDown]
         public void NewWindow()
@@ -79,16 +74,11 @@ namespace MainTest
             secondTab.SendKeys(Keys.Control + Keys.Return);
             var Windows = driver.WindowHandles;
             driver.SwitchTo().Window(Windows[1]);
-
             WaitExtensions.PageLoadWait(driver);
-
-
             driver.FindElement(By.XPath("/html/body/div[2]/div[3]/ul[1]/li[8]/a")).Click();
             string SecondWindow = driver.CurrentWindowHandle;
             driver.SwitchTo().Window(Windows[0]);
-
             WaitExtensions.PageLoadWait(driver);
-
             driver.Navigate().Refresh();
             IWebElement checklogout = driver.FindElement(
           By.CssSelector("body > div.body_container > div:nth-child(6) > div.Right > dl > dd:nth-child(10) > a"));
