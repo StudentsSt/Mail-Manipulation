@@ -48,6 +48,8 @@ namespace MainTest.PageObject.MailObject
 
         public IWebElement insert => driver.FindElement(By.XPath("//*[@id='att']/div[2]/span[1]"));
         public IWebElement insertButton => driver.FindElement(By.XPath("//*[@id='cnrinpFromFileGroupuform']/fieldset[1]/div/input"));
+        public IWebElement uploadArea => driver.FindElement(By.XPath("//div[@class='upload_area']"));
+
         // Objects for  D_DeleteLetter()
         public IWebElement letterslist => driver.FindElement(By.XPath("//a[text()='Листи']"));
         public IList <IWebElement> Letterslists => driver.FindElements(By.XPath("//span[text()='Test: Дуже важливо бути чемним']"));

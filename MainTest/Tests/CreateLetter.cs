@@ -27,15 +27,9 @@ namespace CreateLetter
         {
 
             driver.Navigate().GoToUrl("http://www.i.ua/");
-
-         
-
-
-
             
         }
 
-       
 
         [OneTimeSetUp]
         public void LogIn()
@@ -43,12 +37,9 @@ namespace CreateLetter
             HomePage homePage = new HomePage(driver);
             homePage.Login();
 
-
-
         }
 
-       
-       
+     
 
     [Test]
 
@@ -61,28 +52,30 @@ namespace CreateLetter
             }
 
             mailPageObject.createLetterButton.Click();
+            WaitExtensions.PageLoadWait(driver);
             mailPageObject.fieldMail.SendKeys(TestConfig.Mail);
             mailPageObject.fieldTheme.SendKeys(TestConfig.Theme);
             mailPageObject.fieldText.SendKeys("Some very usefull information");
             mailPageObject.insert.Click();
 
-            WaitExtensions.PageLoadWait(driver);
+           
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
 
 
-            Thread.Sleep(5000);
+
+
+            wait.Until(p => mailPageObject.uploadArea.Enabled);
             string file = "Program.cs";
             string filePath = @"E:\Mail Manipulation\File\" + file;
-          
-                //задаємо шлях до файлу
                 driver.FindElement(By.XPath("//input[@type='file']")).SendKeys(filePath);
 
 
-           Thread.Sleep(5000);
-            //вставляємо його в інпут
+         
 
 
 
-            // WaitExtensions.PageLoadWait(driver); //Was thread sleep
+        
             mailPageObject.saveLetter.Click();
         }
         [Test]
