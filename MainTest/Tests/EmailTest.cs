@@ -58,7 +58,8 @@ namespace MainTest
             Assert.IsTrue(mailPage.mail.Text.Contains("Невелика довідка про"));
             Actions action = new Actions(driver);
             action.MoveToElement(mailPage.mail).Build().Perform();
-            Thread.Sleep(7000);
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            wait.Until(p => mailPage.checkpopup.Enabled);
             Assert.IsTrue(mailPage.checkpopup.Text.Contains("Пропонуємо Вам ознайомитися"));    
             mailPage.ChoosePopup("Невелика довідка про");
             mailPage.acceptbutton.Click();
