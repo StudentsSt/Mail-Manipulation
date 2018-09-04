@@ -57,7 +57,7 @@ namespace Translator
             TranslatorObject translateObject = new TranslatorObject(driver);
             Actions action = new Actions(driver);
             translateObject.selectFirstlang.Click();
-            Thread.Sleep(1000);
+     
             wait.Until(p => translateObject.firstLangPopup.Enabled);
             translateObject.SelectFirstLan(firstlang);    
             translateObject.selectSeclang.Click();
