@@ -67,7 +67,6 @@ E:\Mail Manipulation\MainTest\bin\Debug\nunit.framework.pdb
 E:\Mail Manipulation\MainTest\bin\Debug\nunit.framework.xml
 E:\Mail Manipulation\MainTest\bin\Debug\WebDriver.xml
 E:\Mail Manipulation\MainTest\bin\Debug\WebDriver.Support.xml
-E:\Mail Manipulation\MainTest\obj\Debug\MainTest.csprojAssemblyReference.cache
 E:\Mail Manipulation\MainTest\obj\Debug\MainTest.csproj.CoreCompileInputs.cache
 E:\Mail Manipulation\MainTest\obj\Debug\MainTest.csproj.CopyComplete
 E:\Mail Manipulation\MainTest\obj\Debug\MainTest.dll

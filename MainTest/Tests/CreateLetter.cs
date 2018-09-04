@@ -66,8 +66,7 @@ namespace CreateLetter
             mailPageObject.fieldText.SendKeys("Some very usefull information");
             mailPageObject.insert.Click();
 
-            WaitExtensions.PageLoadWait(driver); //Was thread sleep
-            // mailPageObject.insertButton.Click();
+            WaitExtensions.PageLoadWait(driver);
 
 
             Thread.Sleep(5000);
