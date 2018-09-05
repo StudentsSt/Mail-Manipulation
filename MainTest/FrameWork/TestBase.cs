@@ -66,7 +66,7 @@ namespace MainTest.FrameWork.TestBase
 
             string title = TestContext.CurrentContext.Test.Name;
             string runname = title + DateTime.Now.ToString(" yyyy-MM-dd-HH_mm_ss");
-            string filePath = @"C:\Users\Nicolas\.jenkins\workspace\Screenshots";
+            string filePath = @"C:\\Users\\Nicolas\\.jenkins\\workspace\\Screenshot ";
 
 
             ss.SaveAsFile(filePath + runname + ".jpg", ScreenshotImageFormat.Jpeg);
