@@ -27,7 +27,10 @@ namespace MainTest.PageObjects.TranslatorObjects
         //Choose first language
         public void SelectFirstLan(string firstlang) 
         {
+
+
             IWebElement clickFirstLang = driver.FindElement(By.XPath("//div[@id ='popup_language_menu_1']//a[text()='" + firstlang + "']"));
+            WaitExtensions.WaitForElement(driver, clickFirstLang);
             clickFirstLang.Click();
             Actions action = new Actions(driver);
 
