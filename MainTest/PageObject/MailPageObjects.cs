@@ -52,7 +52,7 @@ namespace MainTest.PageObject.MailObject
 
         // Objects for  D_DeleteLetter()
         public IWebElement letterslist => driver.FindElement(By.XPath("//a[text()='Листи']"));
-        public IList <IWebElement> Letterslists => driver.FindElements(By.XPath("//span[text()='Test: Дуже важливо бути чемним']"));
+        public IList <IWebElement> Letterslists => driver.FindElements(By.XPath("//span[contains(text(), 'Test:')]"));
 
         // public IWebElement draftForDelete => driver.FindElement(By.XPath("//a[text.contains()='Чернетки']"));
         public IWebElement deleteButton => driver.FindElement(By.XPath("//span[text()='Видалити']"));

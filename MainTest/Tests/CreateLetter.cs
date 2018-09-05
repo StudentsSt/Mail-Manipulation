@@ -71,9 +71,6 @@ namespace CreateLetter
                 driver.FindElement(By.XPath("//input[@type='file']")).SendKeys(filePath);
 
 
-         
-
-
 
         
             mailPageObject.saveLetter.Click();

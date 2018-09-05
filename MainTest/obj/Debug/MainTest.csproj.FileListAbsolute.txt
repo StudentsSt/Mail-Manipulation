@@ -71,3 +71,4 @@ E:\Mail Manipulation\MainTest\obj\Debug\MainTest.csproj.CoreCompileInputs.cache
 E:\Mail Manipulation\MainTest\obj\Debug\MainTest.csproj.CopyComplete
 E:\Mail Manipulation\MainTest\obj\Debug\MainTest.dll
 E:\Mail Manipulation\MainTest\obj\Debug\MainTest.pdb
+E:\Mail Manipulation\MainTest\obj\Debug\MainTest.csprojAssemblyReference.cache
